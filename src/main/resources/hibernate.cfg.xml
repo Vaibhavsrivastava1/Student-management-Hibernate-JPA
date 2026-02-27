@@ -1,0 +1,36 @@
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- 1️⃣ Database Driver -->
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <!-- 2️⃣ Database URL -->
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/studentdb
+        </property>
+
+        <!-- 3️⃣ Database Credentials -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">vaibhav</property>
+
+        <!-- 4️⃣ Hibernate Dialect -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <!-- 5️⃣ Show SQL Queries -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- 6️⃣ Auto Table Creation -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+      <mapping class="com.example.stumangement.entity.Student"/>
+<mapping class="com.example.stumangement.entity.Course"/>
+
+     
+    </session-factory>
+</hibernate-configuration>
+
